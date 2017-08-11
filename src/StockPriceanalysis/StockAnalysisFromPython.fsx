@@ -26,7 +26,7 @@ let msftOrd =
   |> Frame.sortRowsByKey
 // Create data frame with just Open and Close prices
 let msft = msftOrd.Columns.[ ["Adj Close";] ]
-// Do the same thing for Facebook
+
 let google =
   googleCsv
   |> Frame.indexRowsDate "Date"
@@ -47,3 +47,21 @@ d
 |> Chart.Line
 |> Chart.WithOptions options
 |> Chart.WithLabels ["Google"; "Msft"; "Apple"]
+
+let gogAdj = google?``Adj Close``
+let gogLogAdj = log(gogAdj) - log(gogAdj.Shift(1))
+
+let msftAdj = msft?``Adj Close``
+let msftLogAdj = log(msftAdj) - log(msftAdj.Shift(1))
+
+let appleAdj = apple?``Adj Close``
+let appleLogAdj = log(appleAdj) - log(appleAdj.Shift(1))
+
+let logOptions =
+    Options ( title = "Log Based Stock Performance", curveType = "function", legend = Legend(position = "bottom") )
+
+[gogLogAdj; msftLogAdj; appleLogAdj]
+|> Chart.Line
+|> Chart.WithOptions logOptions
+|> Chart.WithLabels ["Google"; "Msft"; "Apple"]
+
