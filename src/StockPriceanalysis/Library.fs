@@ -1,4 +1,4 @@
-﻿namespace FSharp.ProjectTemplate
+namespace StockPriceanalysis
 
 /// Documentation for my library
 ///

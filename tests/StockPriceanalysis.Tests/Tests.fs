@@ -1,6 +1,6 @@
-﻿module FSharp.ProjectScaffold.Tests
+module StockPriceanalysis.Tests
 
-open FSharp.ProjectTemplate
+open StockPriceanalysis
 open NUnit.Framework
 
 [<Test>]

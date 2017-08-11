@@ -1,0 +1,25 @@
+type project
+title
+    StockPriceanalysis
+owners
+    Author not set
+authors 
+    Author not set
+projectUrl
+    https://github.com/[github-user]/StockPriceanalysis
+iconUrl
+    https://raw.githubusercontent.com/[github-user]/StockPriceanalysis/master/docs/files/img/logo.png
+licenseUrl
+    https://github.com/[github-user]/StockPriceanalysis/blob/master/LICENSE.txt
+requireLicenseAcceptance
+    false
+copyright
+    Copyright 2015
+tags
+    fsharp
+summary
+    Summary not set
+description
+    Description not set
+
+
