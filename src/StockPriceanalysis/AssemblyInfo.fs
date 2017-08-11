@@ -3,8 +3,8 @@ namespace System
 open System.Reflection
 
 [<assembly: AssemblyTitleAttribute("StockPriceanalysis")>]
-[<assembly: AssemblyProductAttribute("StockPriceanalysis")>]
-[<assembly: AssemblyDescriptionAttribute("Project has no summmary; update build.fsx")>]
+[<assembly: AssemblyProductAttribute("StockPriceAnalysis")>]
+[<assembly: AssemblyDescriptionAttribute("Take Some Stock Data and apply simple statistics")>]
 [<assembly: AssemblyVersionAttribute("1.0.1")>]
 [<assembly: AssemblyFileVersionAttribute("1.0.1")>]
 [<assembly: AssemblyConfigurationAttribute("Release")>]
@@ -12,8 +12,8 @@ do ()
 
 module internal AssemblyVersionInformation =
     let [<Literal>] AssemblyTitle = "StockPriceanalysis"
-    let [<Literal>] AssemblyProduct = "StockPriceanalysis"
-    let [<Literal>] AssemblyDescription = "Project has no summmary; update build.fsx"
+    let [<Literal>] AssemblyProduct = "StockPriceAnalysis"
+    let [<Literal>] AssemblyDescription = "Take Some Stock Data and apply simple statistics"
     let [<Literal>] AssemblyVersion = "1.0.1"
     let [<Literal>] AssemblyFileVersion = "1.0.1"
     let [<Literal>] AssemblyConfiguration = "Release"

@@ -25,21 +25,21 @@ open System.Diagnostics
 
 // The name of the project
 // (used by attributes in AssemblyInfo, name of a NuGet package and directory in 'src')
-let project = "StockPriceanalysis"
+let project = "StockPriceAnalysis"
 
 // Short summary of the project
 // (used as description in AssemblyInfo and as a short summary for NuGet package)
-let summary = "Project has no summmary; update build.fsx"
+let summary = "Take Some Stock Data and apply simple statistics"
 
 // Longer description of the project
 // (used as a description for NuGet package; line breaks are automatically cleaned up)
-let description = "Project has no description; update build.fsx"
+let description = "There is a really good guide on Stock Market Analysis @ https://ntguardian.wordpress.com/2016/09/19/introduction-stock-market-data-python-1/. This code aims to implement that in F#"
 
 // List of author names (for NuGet package)
-let authors = [ "Update Author in build.fsx" ]
+let authors = [ "Karl O Brien" ]
 
 // Tags for your project (for NuGet package)
-let tags = ""
+let tags = "F#"
 
 // File system information
 let solutionFile  = "StockPriceanalysis.sln"
@@ -52,7 +52,7 @@ let testAssemblies = "tests/**/bin" </> configuration </> "*Tests*.dll"
 
 // Git configuration (used for publishing documentation in gh-pages branch)
 // The profile where the project is posted
-let gitOwner = "Update GitHome in build.fsx"
+let gitOwner = "karlobrien"
 let gitHome = sprintf "%s/%s" "https://github.com" gitOwner
 
 // The name of the project on GitHub
@@ -119,7 +119,7 @@ Target "CopyBinaries" (fun _ ->
 // --------------------------------------------------------------------------------------
 // Clean build results
 
-let vsProjProps = 
+let vsProjProps =
 #if MONO
     [ ("DefineConstants","MONO"); ("Configuration", configuration) ]
 #else
