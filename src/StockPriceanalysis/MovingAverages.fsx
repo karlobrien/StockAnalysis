@@ -46,12 +46,18 @@ apple?twentyDay <- apple20d
 apple?fiftyDay <- apple50d
 apple?twoHundred <- apple200d
 
-let options =
-  Options
-    ( title = "20 Day, 50 Day, 200 Day Close Performance", curveType = "function",
-      legend = Legend(position = "bottom") )
+let series = [ "Candlestick"; "line"; "line"; "line" ]
+let adoptions =
+    Options(
+        title = "20 Day, 50 Day, 200 Day Close Performance",
+        vAxis = Axis(title = "Close"),
+        hAxis = Axis(title = "Date"),
+        series =  [| for typ in series -> Series(typ) |],
+        legend = Legend(position = "bottom")
+
+    )
 
 let d = apple.Rows.[DateTime(2016, 1, 4) .. DateTime(2016, 8, 7)]
 d
-|> Chart.Line
-|> Chart.WithOptions options
+|> Chart.Combo
+|> Chart.WithOptions adoptions
